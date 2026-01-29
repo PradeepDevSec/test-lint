@@ -4,12 +4,16 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "lint": "npx eslint",
-    "test": "npm run test",
-    "build": "npm run build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "echo \"No tests yet\"",
+    "build": "echo \"No build step\"",
     "start": "node index.js"
   },
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.2"
   }
 }
