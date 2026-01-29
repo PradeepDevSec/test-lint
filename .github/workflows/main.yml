@@ -1,0 +1,32 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+      branches: ["main]
+jobs:
+  pipeline:
+    runs-on: uibuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: 
+
+      - name: Setup Node.js
+        uses: 
+          with:
+            node-version: 22
+
+      - name: Install dependencies
+        uses: 
+
+      - name: Run Lint
+        uses:
+
+      -name: Run Test
+       uses: 
+
+      -name: Run Build
+       uses: 
+        
