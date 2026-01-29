@@ -22,7 +22,7 @@ jobs:
         uses: npm install
 
       - name: Run Lint
-        uses:npm run lint
+        uses: npm run lint
 
       -name: Run Test
        uses: npm test
