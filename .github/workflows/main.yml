@@ -4,29 +4,29 @@ on:
   push:
     branches: ["main"]
   pull_request:
-      branches: ["main]
+    branches: ["main"]
+
 jobs:
   pipeline:
-    runs-on: uibuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
-      - name: checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
-          with:
-            node-version: 22
+        with:
+          node-version: 22
 
       - name: Install dependencies
-        uses: npm install
+        run: npm install
 
       - name: Run Lint
-        uses:npm run lint
+        run: npm run lint
 
-      -name: Run Test
-       uses: npm test
+      - name: Run Tests
+        run: npm test
 
-      -name: Run Build
-       uses: npm run build
-        
+      - name: Run Build
+        run: npm run build
